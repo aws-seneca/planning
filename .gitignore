@@ -1,0 +1,11 @@
+# Separate repos that live inside this folder, each already on GitHub
+/info/
+/org-profile/
+/aws-101-workshop/
+
+# Private: credentials and meeting links, and raw Discord logs (other people's messages)
+/private.md
+/sources/
+
+.DS_Store
+.claude/
