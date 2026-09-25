@@ -25,9 +25,7 @@ aws-seneca/
 │       │   │   ├── 2026-09-16-kickoff.pptx        ← final slides
 │       │   │   └── run-of-show.md                 ← full run-of-show with speaker notes
 │       │   └── 2026-10-07-aws-101/                ← Event 2, the club's own app (Bilal's direction)
-│       │       ├── README.md                      ← Event 2 facts, and where each version lives
-│       │       ├── workshop-notes.md              ← Sep 13 plan of record
-│       │       ├── workshop-runbook-2026-09-18.md ← original seven-phase runbook
+│       │       ├── README.md                      ← the Event 2 plan: run of show, accounts, email, dates
 │       │       ├── SOLUTION.md                    ← challenge answer key. Git-ignored, never pushed
 │       │       └── app/                           ← the sign-up app. PUBLIC repo aws-seneca/aws-101-workshop
 │       └── aws-official/        ← Event 2 alternative, built on AWS's official EC2 and RDS tutorial
@@ -57,7 +55,7 @@ Only `README.md`, `AGENTS.md`, and `CLAUDE.md` live at the top level.
 
 Event 1, the kickoff, ran online on Wednesday September 16. The deck is in [planning/sessions/2026-fall/2026-09-16-kickoff/](planning/sessions/2026-fall/2026-09-16-kickoff/README.md).
 
-Event 2 is the AWS 101 workshop. Following Bilal's direction, attendees clone a small Express sign-up app from the org, run it on their own EC2 instance, then connect it to RDS PostgreSQL. As of 2026-09-24 the challenge is cloud configuration, not code: attendees create the database with "Connect to an EC2 compute resource" and "Managed in AWS Secrets Manager", attach an IAM role, and the app finds the database by itself. This differs from Bilal's Sep 23 wording that attendees "do the code side"; confirm with him. No CI/CD is involved. The app is in [planning/sessions/2026-fall/2026-10-07-aws-101/app/](planning/sessions/2026-fall/2026-10-07-aws-101/app/README.md): a waitlist page, an organizer table at `/admin`, an API, tests, and an optional nginx setup. Attendee steps are in its `WORKSHOP.md`. It was rebuilt on 2026-09-24, is not yet pushed, and has not yet been run on a real EC2 instance.
+Event 2 is the AWS 101 workshop, planned in [planning/sessions/2026-fall/2026-10-07-aws-101/README.md](planning/sessions/2026-fall/2026-10-07-aws-101/README.md). Following Bilal's direction, attendees clone the club's sign-up app (a Next.js waitlist page and organizer table), run it on their own EC2 instance, then move its data from a local JSON file to RDS PostgreSQL by adding one `DATABASE_URL` line, with no code changes. This differs from Bilal's Sep 23 wording that attendees "do the code side"; confirm with him. The app was rebuilt on 2026-09-24 and has not yet been run on real AWS.
 
 Still open for Event 2:
 
