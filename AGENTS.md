@@ -82,7 +82,7 @@ Roles marked *(inferred)* are nowhere stated in the source, they are read off wh
 | **Maritza** | Marketing | SSF rules and policy, post review, Frosh logistics |
 | **Mohit** | Marketing | Writes and schedules LinkedIn and Instagram posts |
 | **cynthia** | Marketing | Tagged on marketing work, little channel activity |
-| **davedat.** | Member / Event 2 content | **This is the user of this session.** Drafting the Event 2 workshop plan for Daksh. Notes delivered 2026-09-13, awaiting review |
+| **davedat.** (Datta) | Tech lead | **This is the user of this session.** Drafting the Event 2 workshop plan for Daksh. Notes delivered 2026-09-13, awaiting review |
 
 **Bilal, Daksh, and Hatim are the three registered SSF officers**, only they can publish events on the SSF platform.
 
@@ -104,7 +104,7 @@ The user confirmed with the exec team on 2026-09-16 that the Event 1 deck is rea
 
 Still unconfirmed: the post-event feedback form, the Instagram launch post, a screen-share rehearsal of the S3 demo, and whether the AWS credits were distributed. The Sep 9 weekly meeting has no recap posted.
 
-The club has a GitHub org, `aws-seneca`, created 2026-09-16: public repos `info` (club info, session folders, issue forms, CI check) and `.github` (org landing page), plus an `exec` team that owns reviews. The user, davedat. (GitHub `Davedat-110105`), is the only member so far.
+The club has a GitHub org, `aws-seneca`, created 2026-09-16: public repos `info` (club page, student guides, issue forms, link check; session folders moved to `planning/sessions/` on 2026-09-24) and `.github` (org landing page), plus an `exec` team that owns reviews. The user, davedat. (GitHub `Davedat-110105`), is the only member so far.
 
 ### Fall 2026 schedule
 

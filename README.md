@@ -91,7 +91,7 @@ Roles marked "inferred" are not stated anywhere in the channel. They are read of
 | Maritza | Marketing | SSF rules and policy, Instagram and LinkedIn review, Frosh logistics |
 | Mohit | Marketing | Writes and schedules the LinkedIn and Instagram posts |
 | cynthia | Marketing | Tagged on marketing work, little channel activity |
-| davedat. | Member and Event 2 content | Drafting the Event 2 workshop plan for Daksh |
+| davedat. (Datta) | Tech lead | Event 2 plan and workshop app, the org's GitHub repos |
 
 Bilal, Daksh, and Hatim are the three registered SSF officers. Only they can publish events on the SSF side.
 
