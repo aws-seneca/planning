@@ -15,8 +15,9 @@ planning/
     _template/             ← copy to start a new session
     2026-fall/
       2026-09-16-kickoff/  ← Event 1: deck, slides, recap, run-of-show
-      2026-10-07-aws-101/  ← Event 2: README (the plan), SOLUTION.md (git-ignored), app/ (repo aws-101-workshop)
-    aws-official/          ← Event 2 alternative on AWS's official tutorial; site/ is repo aws-101-official-tutorial
+      2026-10-07-aws-101/  ← Event 2: README (the plan), SOLUTION.md (git-ignored), app/ (repo aws-101-workshop),
+                              site/ (repo aws-101-official-tutorial: the AWS 101 Study Guide)
+    aws-official/          ← Event 2 alternative plan on AWS's official PHP tutorial (not chosen)
 info/, org-profile/        ← separate public repos: club page and guides, org profile (git-ignored here)
 brand/                     ← logos and banner
 sources/                   ← Discord log, cleaned and raw (git-ignored)
@@ -101,5 +102,6 @@ Statuses are as of the date in the Source column. "No update" means nobody said 
 - LinkedIn: https://www.linkedin.com/company/aws-student-builder-seneca-poly/
 - Linktree: https://linktr.ee/awsseneca
 - GitHub org: https://github.com/aws-seneca (repos `info`, `.github`, `planning`, `aws-101-workshop`, `aws-101-official-tutorial`)
+- AWS 101 Study Guide: https://aws-seneca.github.io/aws-101-official-tutorial/
 - SSF club signup: https://clubs.ssfinc.ca/SBG/club_signup
 - SSF event templates: https://clubs.ssfinc.ca/events_list?show=templates
