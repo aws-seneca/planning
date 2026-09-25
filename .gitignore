@@ -1,11 +1,22 @@
 # Separate repos that live inside this folder, each already on GitHub
 /info/
 /org-profile/
-/aws-101-workshop/
 
 # Private: credentials and meeting links, and raw Discord logs (other people's messages)
 /private.md
+/planning/private.md
 /sources/
 
 .DS_Store
-.claude/
+
+# Tool and editor folders (.claude, .playwright-mcp, .impeccable, .vscode, ...). Never committed.
+.*/
+!.gitignore
+!.github/
+
+# Session code: each app/ or site/ is its own git repo (see its git remote for the GitHub name).
+/planning/sessions/**/app/
+/planning/sessions/**/site/
+
+# Challenge answer keys stay on this machine: this repo is public.
+/planning/sessions/**/SOLUTION.md

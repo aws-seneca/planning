@@ -40,24 +40,26 @@ Direct, human, no hype. The run-of-show says it plainly: *"You are not selling a
 |---|---|---|
 | `AGENTS.md` | **This file.** Complete briefing | Always, first |
 | `README.md` | Human-facing dashboard for the exec team | When the user wants the team-readable version |
-| `info/` | **Separate public git repo**, `github.com/aws-seneca/info`. One folder per event (`sessions/2026-fall/YYYY-MM-DD-name/`) with `README.md`, `deck.md`, `recap.md`, `.pptx`. Same layout as the GDG chapter's `info` repo. Never copy anything private from this planning folder into it (Discord logs, names against tasks, meeting links, passwords) | When working on a specific event or anything member-facing |
+| `info/` | **Separate public git repo**, `github.com/aws-seneca/info`: who the club is, club rules, and student-pack guides. Session material (slides, recaps) moved out of it into `planning/sessions/` on 2026-09-24, so there is one place to track sessions. Never copy anything private from this planning folder into it | When changing the public club page or guides |
 | `org-profile/` | Separate public git repo `aws-seneca/.github`. `profile/README.md` is the GitHub org landing page | When changing how the org presents itself |
+| `planning/sessions/aws-official/site/` | Git-ignored here. Separate public repo `aws-seneca/aws-101-official-tutorial` (renamed from `aws-101-workshop` on 2026-09-23), Pages at `aws-seneca.github.io/aws-101-official-tutorial/`. Companion site that follows AWS's official EC2 and RDS tutorial | When reviewing that tutorial or its companion site |
+| `planning/sessions/2026-fall/2026-10-07-aws-101/app/` | Git-ignored here. Public repo `aws-seneca/aws-101-workshop`: the Express + React sign-up app attendees clone onto EC2. Sign-ups save to a local JSON file until attendees set up RDS (Secrets Manager-managed password, "Connect to an EC2 compute resource") and attach an IAM role; the app then finds RDS by itself. Attendee steps: `app/WORKSHOP.md` | When working on the Event 2 app or challenge |
+| `planning/sessions/2026-fall/2026-10-07-aws-101/SOLUTION.md` | **Private answer key, git-ignored.** This planning repo is public, so it must never be committed or pasted into a public repo. Replaces the old local solution folder (moved to the Trash 2026-09-24; the private GitHub repo `aws-seneca/aws-101-workshop-solution` still exists) | When checking attendee answers |
 | `planning/action-items.md` | Task table: owner, due, status, source date | When working on what's outstanding |
 | `planning/timeline.md` | Deduplicated chronological log, Jul 3 – Sep 10 | When you need to know when or why something was decided |
-| `events/2026-10-07-aws-101/workshop-notes.md` | **Event 2 plan of record.** full drafted workshop plan | When working on Event 2 |
-| `events/cicd-track/session-spec.md` | CI/CD plan of record. One session at 45 to 60 minutes total, 20 held for debugging. Real workflow and CloudFormation, S3 target. Out for technical review | When working on the CI/CD event |
-| `events/cicd-track/README.md` | Wider CI/CD context. Deploy target comparison and the two-session version | For the roadmap question and the target tradeoffs |
-| `events/cicd-track/s3-fallback-proposal.md` | Earlier single-session S3 version, kept as the cheap fallback | If the container track proves too costly or too tight |
-| `events/2026-10-07-aws-101/README.md` | Event 2 facts at a glance | For date, format, and owners only |
-| `AWS x Seneca — Master Plan.md` | Vision, culture, curriculum, 8-event annual arc | For strategic context |
-| `Event 1 — Kickoff.md` | Full 15-slide run-of-show with speaker notes, ~36 KB | Before touching Event 1 delivery |
+| `planning/sessions/2026-fall/2026-10-07-aws-101/workshop-notes.md` | **Event 2 plan of record.** full drafted workshop plan | When working on Event 2 |
+| `planning/sessions/aws-official/workshop-runbook.md` | Draft alternative based on AWS's official EC2 and RDS tutorial; do not assume the team selected it | When comparing workshop versions |
+| `planning/sessions/2026-fall/2026-10-07-aws-101/workshop-runbook-2026-09-18.md` | Second runbook draft that appeared at the folder root on Sep 18 (moved here Sep 24). Author not recorded | When comparing workshop versions |
+| `planning/sessions/2026-fall/2026-10-07-aws-101/README.md` | Event 2 facts at a glance | For date, format, and owners only |
+| `planning/master-plan.md` | Vision, culture, curriculum, 8-event annual arc | For strategic context |
+| `planning/sessions/2026-fall/2026-09-16-kickoff/run-of-show.md` | Full 15-slide run-of-show with speaker notes, ~36 KB | Before touching Event 1 delivery |
 | `sources/discord-log.md` | Discord log, cleaned and deduplicated | Only to verify a claim. Never cite it as current state |
 | `sources/discord-log.raw-backup.md` | The untouched original paste | Only if you suspect the cleaned version lost something |
-| `SETUP.md` | Tooling installed for this project and the one command that reproduces it | When setting up a new machine, or when an AWS fact needs verifying |
+| `planning/setup.md` | Tooling installed for this project and the one command that reproduces it | When setting up a new machine, or when an AWS fact needs verifying |
 
-### Two files have notes-app frontmatter, do not rename them
+### Two files have notes-app frontmatter
 
-`AWS x Seneca — Master Plan.md` and `Event 1 — Kickoff.md` carry YAML frontmatter (`favorited`, `pinned`, `title`, `created`, `modified`) from a notes application export. **Renaming or moving them likely breaks the user's sync.** Leave the filenames, em-dashes and all. Link to them; do not reorganize them.
+`planning/master-plan.md` and `planning/sessions/2026-fall/2026-09-16-kickoff/run-of-show.md` carry YAML frontmatter (`favorited`, `pinned`, `title`, `created`, `modified`) from a notes application export. They were moved and renamed from the folder root (`AWS x Seneca — Master Plan.md`, `Event 1 — Kickoff.md`) at the user's request on 2026-09-24. Keep the frontmatter intact; if the user's notes sync breaks, that move is the cause.
 
 ### `sources/discord-log.md` is the Discord log, now cleaned
 
@@ -100,7 +102,7 @@ The team often finishes work without posting that it's done. **When tracking sta
 
 ### Update 2026-09-16: Event 1 is today, slides confirmed
 
-The user confirmed with the exec team on 2026-09-16 that the Event 1 deck is ready for online delivery. The in-person run-of-show problem described in earlier versions of this file is resolved. The final deck lives in `info/sessions/2026-fall/2026-09-16-kickoff/`.
+The user confirmed with the exec team on 2026-09-16 that the Event 1 deck is ready for online delivery. The in-person run-of-show problem described in earlier versions of this file is resolved. The final deck lives in `planning/sessions/2026-fall/2026-09-16-kickoff/`.
 
 Still unconfirmed: the post-event feedback form, the Instagram launch post, a screen-share rehearsal of the S3 demo, and whether the AWS credits were distributed. The Sep 9 weekly meeting has no recap posted.
 
@@ -141,7 +143,7 @@ Full detail with source dates is in `planning/action-items.md`. The short versio
 
 **Blocking Event 1:** adapt the run-of-show for online *(unassigned)*; final slide review *(Sneha, Hatim, Daksh)*; create the feedback form *(unassigned)*; post the Instagram content *(Mohit, Maritza)*; rehearse the S3 demo over screen share *(Bilal)*.
 
-**In flight:** Event 2 workshop plan drafted by davedat. on 2026-09-13, awaiting Daksh's review, see `events/2026-10-07-aws-101/workshop-notes.md`; distribute AWS credits *(Bilal)*; recruit marketing help *(Bilal)*; SSF approval walkthrough for coordinators *(Bilal, overdue since Aug 28)*; Amazon speaker outreach *(Bilal)*.
+**In flight:** Event 2 workshop plan drafted by davedat. on 2026-09-13, awaiting Daksh's review, see `planning/sessions/2026-fall/2026-10-07-aws-101/workshop-notes.md`; distribute AWS credits *(Bilal)*; recruit marketing help *(Bilal)*; SSF approval walkthrough for coordinators *(Bilal, overdue since Aug 28)*; Amazon speaker outreach *(Bilal)*.
 
 **Blocking Event 2:** how attendees get AWS accounts. AWS requires a payment method at signup and has replaced the twelve-month free tier with a credits-based Free plan ($100 at signup, up to $200 total, account closes at six months or when credits run out). Someone needs to find a professor with an AWS Academy educator account who will host a Learner Lab classroom, or accept that part of the room cannot make an account. This blocks the pre-event email, due around Sep 30.
 
@@ -153,7 +155,7 @@ Full detail with source dates is in `planning/action-items.md`. The short versio
 
 ## 7. Event 1 run-of-show, in brief
 
-Full version in `Event 1 — Kickoff.md`. Summarized so you can reason about it without opening a 36 KB file.
+Full version in `planning/sessions/2026-fall/2026-09-16-kickoff/run-of-show.md`. Summarized so you can reason about it without opening a 36 KB file.
 
 60 minutes, ~15 slides, six phases:
 
@@ -188,9 +190,9 @@ Between the main events, the plan calls for monthly online community sessions: s
 
 Note the fall schedule (Sep 16, Oct 7, Oct 28, Nov 18) maps four events into one term, compressing the master plan's Q1–Q2 arc. The stated Event 2 topic matches master-plan Event 2. Events 3 and 4 have no confirmed topics.
 
-**There is a live proposal to pull CI/CD forward** from master-plan Event 6 (Q3 DevOps) into the empty fall slots, see `events/cicd-track/README.md`. It is scoped as **two sessions**, not one: containers to production first, the pipeline second. That would consume both Oct 28 and Nov 18. It needs Bilal's sign-off, since the Q3 placement was his roadmap decision and this takes the rest of the term.
+**There is a live proposal to pull CI/CD forward** from master-plan Event 6 (Q3 DevOps) into the empty fall slots, its drafts were removed from the folder on 2026-09-24 and are in git history: `events/cicd-track/` in commit `df72b74`. It is scoped as **two sessions**, not one: containers to production first, the pipeline second. That would consume both Oct 28 and Nov 18. It needs Bilal's sign-off, since the Q3 placement was his roadmap decision and this takes the rest of the term.
 
-The container track is not free tier, but it is cheap. App Runner is the recommended target because it auto-deploys on an ECR push, needs no load balancer, and can be paused. Roughly three to four dollars for a room of thirty over a 90-minute session, which still needs confirming with the Pricing Calculator. ECS Express Mode is the step up and adds a load balancer. `events/cicd-track/s3-fallback-proposal.md` holds the S3 fallback that costs nothing and fits one session.
+The container track is not free tier, but it is cheap. App Runner is the recommended target because it auto-deploys on an ECR push, needs no load balancer, and can be paused. Roughly three to four dollars for a room of thirty over a 90-minute session, which still needs confirming with the Pricing Calculator. ECS Express Mode is the step up and adds a load balancer. `s3-fallback-proposal.md` (in git history, `events/cicd-track/` at `df72b74`) holds the S3 fallback that costs nothing and fits one session.
 
 ---
 
@@ -209,19 +211,19 @@ Both Meetup group URLs appear in the source and nobody has said which is canonic
 - SSF club signup: https://clubs.ssfinc.ca/SBG/club_signup
 - SSF event templates: https://clubs.ssfinc.ca/events_list?show=templates
 
-**Private links and the shared credential** (Event 1 slide deck, meeting poll, design tool password, Google Meet rooms) live in `private.md` at the folder root. It is git-ignored, because this folder is a public GitHub repo. Never copy its contents into any tracked file.
+**Private links and the shared credential** (Event 1 slide deck, meeting poll, design tool password, Google Meet rooms) live in `planning/private.md`. It is git-ignored, because this folder is a public GitHub repo. Never copy its contents into any tracked file.
 
 ---
 
 ## 10. Working rules for agents
 
 1. **Never delete `sources/discord-log.raw-backup.md`.** It is the pristine source for everything else here. `sources/discord-log.md` is a cleaned derivative and can be regenerated from it.
-2. **Never rename or move `AWS x Seneca — Master Plan.md` or `Event 1 — Kickoff.md`.** They stay at the folder root. Notes-app frontmatter; renaming breaks the user's sync.
+2. **Keep the folder root to `README.md`, `AGENTS.md`, `CLAUDE.md`.** Everything for a session lives in `planning/sessions/<term>/<YYYY-MM-DD-name>/`, including that session's app repos and git-ignored `SOLUTION.md`. Planning and strategy live in `planning/`.
 3. **Do not infer that a task is done.** The team communicates in Discord and often does not close the loop. If there is no dated message confirming completion, the status is "no update in channel."
 4. **Trace claims to dates.** Every status line in `planning/action-items.md` and `planning/timeline.md` carries a source date. Preserve that discipline when you add rows.
 5. **Keep derived files in sync.** If you learn something new, it belongs in `planning/timeline.md` (what happened, when), `planning/action-items.md` (what is outstanding), and here (current state). Do not let the three drift apart.
 6. **Match the tone.** Member-facing copy is direct and human, no hype. See section 1.
 7. **Nothing outward-facing without a green light.** Do not post to LinkedIn, Instagram, Discord, Meetup, or the SSF platform. Draft; let a human send.
 8. **Dates in this project are in 2026** and the team writes them ambiguously. Normalize to ISO when you write anything new.
-9. **Verify AWS facts before they reach students.** AWS changed the free tier from the twelve-month model to a credits-based Free/Paid plan split, and the old version is still what most people repeat. Anything about pricing, free tier, or signup that will be said to a room gets checked first, the `aws-knowledge` MCP server is installed for exactly this, and `aws.amazon.com/free` is the fallback. See `SETUP.md`.
-10. **Put files where the README layout says.** Private drafts go in `events/`, tasks in `planning/`, anything public in `info/` (its own git repo, commit and push there). Never copy private material into `info/` or `org-profile/`.
+9. **Verify AWS facts before they reach students.** AWS changed the free tier from the twelve-month model to a credits-based Free/Paid plan split, and the old version is still what most people repeat. Anything about pricing, free tier, or signup that will be said to a room gets checked first, the `aws-knowledge` MCP server is installed for exactly this, and `aws.amazon.com/free` is the fallback. See `planning/setup.md`.
+10. **Put files where the README layout says.** Everything for a session (plans, slides, recaps, code) goes in `planning/sessions/<term>/<YYYY-MM-DD-name>/`, tasks and strategy in `planning/`. `info/` keeps only the public club page and guides (its own git repo). Never copy private material into `info/` or `org-profile/`.

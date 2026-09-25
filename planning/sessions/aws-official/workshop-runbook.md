@@ -111,7 +111,7 @@ Repeat as a Discord reminder 48 hours out and on the day.
 
 ### What attendees build
 
-AWS's official tutorial, [Create a web server and an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/TUT_WebAppWithRDS.html), PostgreSQL version. Nothing homemade to host. The companion page at https://aws-seneca.github.io/aws-101-workshop/ links each part of the tutorial and lists where the day differs from it (Phase 4).
+AWS's official tutorial, [Create a web server and an Amazon RDS DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/TUT_WebAppWithRDS.html), PostgreSQL version. Nothing homemade to host. The companion page at https://aws-seneca.github.io/aws-101-official-tutorial/ links each part of the tutorial and lists where the day differs from it (Phase 4).
 
 ### Room and equipment
 

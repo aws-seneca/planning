@@ -1,35 +1,43 @@
 # AWS Student Builder Group at Seneca: operations hub
 
-Last updated 2026-09-16.
+Last updated 2026-09-24.
 
-This folder holds the planning for running the club. It is a public GitHub repo; credentials and meeting links stay in the git-ignored `private.md`. Member-facing material goes in `info/`.
+This folder holds the planning for running the club. It is a public GitHub repo; credentials and meeting links stay in the git-ignored `planning/private.md`. Member-facing material goes in `info/`.
 
 ## Folder layout
 
 ```
 aws-seneca/
-├── README.md                          ← you are here: status, dates, team, decisions, links
-├── AGENTS.md, CLAUDE.md               ← briefing for AI coding agents
-├── SETUP.md                           ← tooling setup for this folder
-├── AWS x Seneca — Master Plan.md      ← vision, culture, eight-event arc (notes-app file, do not move)
-├── Event 1 — Kickoff.md               ← full Event 1 run-of-show (notes-app file, do not move)
-├── planning/
-│   ├── action-items.md                ← open tasks with owner, due date, status
-│   └── timeline.md                    ← what was decided and when
-├── events/                            ← private working plans, one folder per event or track
-│   ├── 2026-10-07-aws-101/
-│   │   ├── README.md                  ← Event 2 facts at a glance
-│   │   └── workshop-notes.md          ← Event 2 plan of record
-│   └── cicd-track/
-│       ├── README.md                  ← CI/CD context, deploy targets, two-session version
-│       ├── session-spec.md            ← one-session technical spec, out for review
-│       └── s3-fallback-proposal.md    ← earlier S3-only version, the cheap fallback
-├── sources/
-│   ├── discord-log.md                 ← Discord export, cleaned. Source material only
-│   └── discord-log.raw-backup.md      ← untouched original paste. Never delete
-├── brand/                             ← logo, org avatar, banner from awsseneca.com
-├── info/                              ← PUBLIC git repo, github.com/aws-seneca/info
-└── org-profile/                       ← PUBLIC git repo, github.com/aws-seneca/.github
+├── README.md                    ← you are here: status, dates, team, decisions, links
+├── AGENTS.md, CLAUDE.md         ← briefing for AI coding agents
+├── planning/                    ← internal: the team's working files
+│   ├── master-plan.md           ← vision, culture, eight-event arc
+│   ├── action-items.md          ← open tasks with owner, due date, status
+│   ├── timeline.md              ← what was decided and when
+│   ├── setup.md                 ← tooling for this folder
+│   ├── private.md               ← passwords and meeting links. Git-ignored
+│   └── sessions/
+│       ├── README.md            ← index of every session, and how to add one
+│       ├── _template/           ← copy this to start a new session
+│       ├── 2026-fall/
+│       │   ├── 2026-09-16-kickoff/
+│       │   │   ├── README.md, deck.md, recap.md   ← Event 1 details, slide text, recap
+│       │   │   ├── 2026-09-16-kickoff.pptx        ← final slides
+│       │   │   └── run-of-show.md                 ← full run-of-show with speaker notes
+│       │   └── 2026-10-07-aws-101/                ← Event 2, the club's own app (Bilal's direction)
+│       │       ├── README.md                      ← Event 2 facts, and where each version lives
+│       │       ├── workshop-notes.md              ← Sep 13 plan of record
+│       │       ├── workshop-runbook-2026-09-18.md ← original seven-phase runbook
+│       │       ├── SOLUTION.md                    ← challenge answer key. Git-ignored, never pushed
+│       │       └── app/                           ← the sign-up app. PUBLIC repo aws-seneca/aws-101-workshop
+│       └── aws-official/        ← Event 2 alternative, built on AWS's official EC2 and RDS tutorial
+│           ├── README.md
+│           ├── workshop-runbook.md                ← runbook v2
+│           └── site/                              ← companion site. PUBLIC repo aws-seneca/aws-101-official-tutorial
+├── info/                        ← PUBLIC git repo, github.com/aws-seneca/info: who we are, club rules, student-pack guides
+├── org-profile/                 ← PUBLIC git repo, github.com/aws-seneca/.github
+├── brand/                       ← logo, org avatar, banner from awsseneca.com
+└── sources/                     ← Discord log, cleaned and raw. Git-ignored
 ```
 
 Where things go:
@@ -38,20 +46,24 @@ Where things go:
 |---|---|
 | A task, owner, or deadline | `planning/action-items.md` |
 | A decision and the date it was made | `planning/timeline.md` |
-| A draft plan for an upcoming event | `events/YYYY-MM-DD-short-name/` |
-| Final slides, public event details, a recap | `info/sessions/`, then commit and push |
+| Anything for a session: plan, slides, runbook, recap, code | `planning/sessions/<term>/<YYYY-MM-DD-name>/` (copy `planning/sessions/_template/`) |
+| An answer key or anything attendees must not see early | `SOLUTION.md` in that session folder (git-ignored) |
 | Logos and images | `brand/` |
-| Passwords, meeting links, contact details | `private.md` (git-ignored), never a tracked file |
+| Passwords, meeting links, contact details | `planning/private.md` (git-ignored), never a tracked file |
 
-## Current state: Event 1 is today
+Only `README.md`, `AGENTS.md`, and `CLAUDE.md` live at the top level.
 
-Event 1, the kickoff, runs Wednesday September 16, 2026, from 1:00 to 2:00 PM ET, online.
+## Current state: Event 2 is on October 7
 
-The slides are ready for online delivery. The exec team confirmed this on 2026-09-16. The deck is in [info/sessions/2026-fall/2026-09-16-kickoff/](info/sessions/2026-fall/2026-09-16-kickoff/README.md).
+Event 1, the kickoff, ran online on Wednesday September 16. The deck is in [planning/sessions/2026-fall/2026-09-16-kickoff/](planning/sessions/2026-fall/2026-09-16-kickoff/README.md).
 
-Still unconfirmed: the post-event feedback form, the Instagram launch post, and a rehearsal of the S3 demo over screen share.
+Event 2 is the AWS 101 workshop. Following Bilal's direction, attendees clone a small Express sign-up app from the org, run it on their own EC2 instance, then connect it to RDS PostgreSQL. As of 2026-09-24 the challenge is cloud configuration, not code: attendees create the database with "Connect to an EC2 compute resource" and "Managed in AWS Secrets Manager", attach an IAM role, and the app finds the database by itself. This differs from Bilal's Sep 23 wording that attendees "do the code side"; confirm with him. No CI/CD is involved. The app is in [planning/sessions/2026-fall/2026-10-07-aws-101/app/](planning/sessions/2026-fall/2026-10-07-aws-101/app/README.md): a waitlist page, an organizer table at `/admin`, an API, tests, and an optional nginx setup. Attendee steps are in its `WORKSHOP.md`. It was rebuilt on 2026-09-24, is not yet pushed, and has not yet been run on a real EC2 instance.
 
-Event 2 needs an account strategy. The workshop plan is drafted in [events/2026-10-07-aws-101/workshop-notes.md](events/2026-10-07-aws-101/workshop-notes.md), and writing it surfaced a blocker. AWS now requires a payment method at signup and has replaced the twelve-month free tier with a credits-based free plan. Somebody needs to find a professor with an AWS Academy educator account who will host a Learner Lab classroom, or accept that some attendees cannot make an account. This blocks the pre-event email.
+Still open for Event 2:
+
+- **Accounts.** AWS now requires a payment method at signup and has replaced the twelve-month free tier with a credits-based free plan. Somebody needs to find a professor with an AWS Academy educator account who will host a Learner Lab classroom, or accept that some attendees cannot make an account. This blocks the pre-event email.
+- **Format.** In person or online is not decided.
+- **Runbook.** [workshop-runbook.md](planning/sessions/aws-official/workshop-runbook.md) still describes AWS's PHP sample page instead of the Express app. A step-by-step attendee tutorial is still to be written.
 
 The club now has a GitHub org, [github.com/aws-seneca](https://github.com/aws-seneca), with a public [info](https://github.com/aws-seneca/info) repo. It has issue forms for event ideas and talk offers, which is one answer to the open question about moving task tracking off Discord.
 
@@ -59,14 +71,14 @@ The club now has a GitHub org, [github.com/aws-seneca](https://github.com/aws-se
 
 | Event | Date | Format | Topic | Status |
 |---|---|---|---|---|
-| Event 1, kickoff | Wed Sep 16, 1:00 to 2:00 PM ET | Online | Club intro, AWS explained simply, cert path, live S3 deploy | Published on Meetup and LinkedIn |
-| Event 2 | Wed Oct 7 | To be decided | AWS 101, core services workshop | Plan drafted Sep 13, awaiting Daksh's review |
+| Event 1, kickoff | Wed Sep 16, 1:00 to 2:00 PM ET | Online | Club intro, AWS explained simply, cert path, live S3 deploy | Done |
+| Event 2 | Wed Oct 7 | To be decided | AWS 101, core services workshop | Plan drafted Sep 13; workshop app built Sep 24 |
 | Event 3 | Wed Oct 28 | To be decided | Proposed: CI/CD part 1, container to production | Two-session track drafted Sep 13, needs Bilal's sign-off |
 | Event 4 | Wed Nov 18 | To be decided | Proposed: CI/CD part 2, the pipeline | Same proposal. Would consume both remaining fall slots |
 
 Conflict to watch: SSF Frosh runs events on Sep 15, 16, and 18. A midday online event on Sep 16 competes with Frosh for attendance. The team kept Sep 16.
 
-Weekly team meeting: Wednesdays at 7:00 PM ET on Google Meet. Set through when2meet after Sunday-morning slots kept failing. Room link in `private.md`.
+Weekly team meeting: Wednesdays at 7:00 PM ET on Google Meet. Set through when2meet after Sunday-morning slots kept failing. Room link in `planning/private.md`.
 
 ## Team and roles
 
@@ -124,4 +136,4 @@ Internal tools:
 - SSF club signup, https://clubs.ssfinc.ca/SBG/club_signup
 - SSF event templates, https://clubs.ssfinc.ca/events_list?show=templates
 
-The Event 1 slide deck, meeting poll, design tool password and Google Meet rooms are in `private.md`, which git ignores. This folder is public on GitHub.
+The Event 1 slide deck, meeting poll, design tool password and Google Meet rooms are in `planning/private.md`, which git ignores. This folder is public on GitHub.

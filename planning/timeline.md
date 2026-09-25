@@ -14,7 +14,7 @@ Dates are normalized to ISO format. Times are ET. Channel attribution is marked 
 
 **Jul 10.** Call pushed to 2:15 PM to catch everyone. RSVP requested from all.
 
-**Jul 12.** Meeting moved to Google Meet (`sgc-vhox-ysp`) for convenience. Onboarding call happens.
+**Jul 12.** Meeting moved to Google Meet (room link in `planning/private.md`) for convenience. Onboarding call happens.
 
 **Jul 31.** Bilal asks everyone with an Aura account to join the club on the SSF platform, and floats a meeting about launch and SSF logistics.
 
@@ -85,15 +85,19 @@ The team discusses the online plan: whether the SSF rule also covers online even
 
 In the same exchange the Event 2 scope is settled: **notes, not slides.** Daksh, "Notes are good. Presentation can be done later, once it's approved." No deadline set beyond "take ur time," though Oct 7 sets the real one.
 
-**Sep 13.** davedat. drafts the Event 2 workshop plan. See [events/2026-10-07-aws-101/workshop-notes.md](../events/2026-10-07-aws-101/workshop-notes.md). Drafting surfaced a blocker nobody had raised: AWS now requires a payment method at signup and has replaced the twelve-month free tier with a credits-based Free plan, so how attendees get accounts has to be settled before the pre-event email can be written.
+**Sep 13.** davedat. drafts the Event 2 workshop plan. See [planning/sessions/2026-fall/2026-10-07-aws-101/workshop-notes.md](sessions/2026-fall/2026-10-07-aws-101/workshop-notes.md). Drafting surfaced a blocker nobody had raised: AWS now requires a payment method at signup and has replaced the twelve-month free tier with a credits-based Free plan, so how attendees get accounts has to be settled before the pre-event email can be written.
 
 **Sep 16.** The exec team confirms the Event 1 deck is ready for online delivery. davedat. creates the `aws-seneca` GitHub org with a public `info` repo holding the kickoff session folder and slides, issue forms, and an org landing page. The planning folder is reorganized into `planning/`, `events/`, and `sources/`.
 
-**Sep 18.** A second Event 2 runbook appears at the folder root (`event-2-aws-101-workshop-runbook.md`, author not recorded here), built around seven phases, an EC2 guided build, an RDS demo, and a team add-on challenge. davedat. merges it with the Sep 13 notes into an expanded, fact-checked version at [events/2026-10-07-aws-101/workshop-runbook.md](../events/2026-10-07-aws-101/workshop-runbook.md), for review by friends, colleagues, and a tech lead. Corrections include `t3.micro` instead of `t2.micro` under the new free plan, security groups rather than IAM for EC2-to-RDS access, and an added teardown phase.
+**Sep 18.** A second Event 2 runbook appears at the folder root (`event-2-aws-101-workshop-runbook.md`, author not recorded here; moved to `planning/sessions/2026-fall/2026-10-07-aws-101/workshop-runbook-2026-09-18.md` on Sep 24), built around seven phases, an EC2 guided build, an RDS demo, and a team add-on challenge. davedat. merges it with the Sep 13 notes into an expanded, fact-checked version at [planning/sessions/aws-official/workshop-runbook.md](sessions/aws-official/workshop-runbook.md), for review by friends, colleagues, and a tech lead. Corrections include `t3.micro` instead of `t2.micro` under the new free plan, security groups rather than IAM for EC2-to-RDS access, and an added teardown phase.
 
-**Sep 18, later.** davedat. publishes the workshop guide as a public repo, [aws-seneca/aws-101-workshop](https://github.com/aws-seneca/aws-101-workshop), a Next.js static site on GitHub Pages at https://aws-seneca.github.io/aws-101-workshop/. It also hosts the base `index.html` that each attendee's EC2 instance downloads at boot, which resolves the placeholder URL in the runbook's user data script. A review slide deck for the runbook is drafted too.
+**Sep 18, later.** davedat. publishes the workshop guide as a public repo, then named `aws-seneca/aws-101-workshop` (now [aws-seneca/aws-101-official-tutorial](https://github.com/aws-seneca/aws-101-official-tutorial), renamed Sep 23), a Next.js static site on GitHub Pages, then at `aws-seneca.github.io/aws-101-official-tutorial/`. It also hosts the base `index.html` that each attendee's EC2 instance downloads at boot, which resolves the placeholder URL in the runbook's user data script. A review slide deck for the runbook is drafted too.
 
 **Sep 18, evening.** After feedback, the workshop drops all homemade material (practice labs, custom page, sign-up API) and follows AWS's official tutorial, *Create a web server and an Amazon RDS DB instance*, in the real Console. The companion site becomes one page listing the tutorial's parts and the five places the day differs from it (region, `t3.micro`, EC2 Instance Connect, PostgreSQL, simple password). Runbook updated to match.
+
+**Sep 23.** The Event 2 lead clarifies the plan in chat: Event 2 only (Event 1 was separate), a small Express app deployed to EC2, no CI/CD (the app is committed once and attendees clone it from the org), AWS's own instructions for the EC2 and RDS console steps, and the attendee challenge is writing the code that moves sign-ups from local storage into RDS. davedat. builds it: public starter [aws-seneca/aws-101-workshop](https://github.com/aws-seneca/aws-101-workshop) and private answer key `aws-seneca/aws-101-workshop-solution`. The earlier companion site is renamed to [aws-seneca/aws-101-official-tutorial](https://github.com/aws-seneca/aws-101-official-tutorial), Pages now at https://aws-seneca.github.io/aws-101-official-tutorial/.
+
+**Sep 24.** davedat. rebuilds the Event 2 app (waitlist page, organizer table, API, tests, optional nginx) and reorganizes this folder: session plans and code move to `planning/sessions/`, the AWS-official version to `planning/sessions/aws-official/`, the answer key becomes a git-ignored `SOLUTION.md`. The workshop challenge is changed from writing database code to cloud configuration: RDS with "Connect to an EC2 compute resource" and a Secrets Manager-managed password, plus an IAM role, after which the app finds RDS by itself. Not yet confirmed with Bilal, not yet pushed, not yet run on real AWS.
 
 ---
 

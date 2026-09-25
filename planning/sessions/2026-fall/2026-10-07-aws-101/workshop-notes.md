@@ -196,7 +196,7 @@ End on a live CI/CD demo rather than a slide. Presenter only, nobody follows alo
 
 > "Watch this. I'm changing one line in this file. I'm pushing it. I'm not touching AWS at all." Switch to the GitHub Actions tab, wait for it, refresh the site. "That's what we're doing next event."
 
-This needs no preparation beyond a pipeline the presenter already has working. It ends the workshop on something better than a certification slide, and it advertises Event 3 to the people most likely to come. See [events/cicd-track/README.md](../cicd-track/README.md).
+This needs no preparation beyond a pipeline the presenter already has working. It ends the workshop on something better than a certification slide, and it advertises Event 3 to the people most likely to come. See the CI/CD proposal (removed 2026-09-24, in git history: `events/cicd-track/` in commit `df72b74`).
 
 ## Helpers
 
