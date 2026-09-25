@@ -1,137 +1,105 @@
 # AWS Student Builder Group at Seneca: operations hub
 
-Last updated 2026-09-24.
+Last updated 2026-09-24. **This page is the single source for status, tasks, team, and links.** The repo is public: passwords and meeting links live only in the git-ignored `planning/private.md`.
 
-This folder holds the planning for running the club. It is a public GitHub repo; credentials and meeting links stay in the git-ignored `planning/private.md`. Member-facing material goes in `info/`.
-
-## Folder layout
+## Where things are
 
 ```
-aws-seneca/
-├── README.md                    ← you are here: status, dates, team, decisions, links
-├── AGENTS.md, CLAUDE.md         ← briefing for AI coding agents
-├── planning/                    ← internal: the team's working files
-│   ├── master-plan.md           ← vision, culture, eight-event arc
-│   ├── action-items.md          ← open tasks with owner, due date, status
-│   ├── timeline.md              ← what was decided and when
-│   ├── setup.md                 ← tooling for this folder
-│   ├── private.md               ← passwords and meeting links. Git-ignored
-│   └── sessions/
-│       ├── README.md            ← index of every session, and how to add one
-│       ├── _template/           ← copy this to start a new session
-│       ├── 2026-fall/
-│       │   ├── 2026-09-16-kickoff/
-│       │   │   ├── README.md, deck.md, recap.md   ← Event 1 details, slide text, recap
-│       │   │   ├── 2026-09-16-kickoff.pptx        ← final slides
-│       │   │   └── run-of-show.md                 ← full run-of-show with speaker notes
-│       │   └── 2026-10-07-aws-101/                ← Event 2, the club's own app (Bilal's direction)
-│       │       ├── README.md                      ← the Event 2 plan: run of show, accounts, email, dates
-│       │       ├── SOLUTION.md                    ← challenge answer key. Git-ignored, never pushed
-│       │       └── app/                           ← the sign-up app. PUBLIC repo aws-seneca/aws-101-workshop
-│       └── aws-official/        ← Event 2 alternative, built on AWS's official EC2 and RDS tutorial
-│           ├── README.md
-│           ├── workshop-runbook.md                ← runbook v2
-│           └── site/                              ← companion site. PUBLIC repo aws-seneca/aws-101-official-tutorial
-├── info/                        ← PUBLIC git repo, github.com/aws-seneca/info: who we are, club rules, student-pack guides
-├── org-profile/                 ← PUBLIC git repo, github.com/aws-seneca/.github
-├── brand/                       ← logo, org avatar, banner from awsseneca.com
-└── sources/                     ← Discord log, cleaned and raw. Git-ignored
+README.md                  ← you are here
+AGENTS.md, CLAUDE.md       ← rules and tooling for AI agents working in this folder
+planning/
+  master-plan.md           ← vision, culture, the eight-event arc
+  timeline.md              ← what was decided and done, and when
+  private.md               ← passwords, meeting links (git-ignored)
+  sessions/
+    _template/             ← copy to start a new session
+    2026-fall/
+      2026-09-16-kickoff/  ← Event 1: deck, slides, recap, run-of-show
+      2026-10-07-aws-101/  ← Event 2: README (the plan), SOLUTION.md (git-ignored), app/ (repo aws-101-workshop)
+    aws-official/          ← Event 2 alternative on AWS's official tutorial; site/ is repo aws-101-official-tutorial
+info/, org-profile/        ← separate public repos: club page and guides, org profile (git-ignored here)
+brand/                     ← logos and banner
+sources/                   ← Discord log, cleaned and raw (git-ignored)
 ```
-
-Where things go:
 
 | You have | Put it in |
 |---|---|
-| A task, owner, or deadline | `planning/action-items.md` |
-| A decision and the date it was made | `planning/timeline.md` |
-| Anything for a session: plan, slides, runbook, recap, code | `planning/sessions/<term>/<YYYY-MM-DD-name>/` (copy `planning/sessions/_template/`) |
-| An answer key or anything attendees must not see early | `SOLUTION.md` in that session folder (git-ignored) |
-| Logos and images | `brand/` |
-| Passwords, meeting links, contact details | `planning/private.md` (git-ignored), never a tracked file |
+| A task, owner, or deadline | [Open tasks](#open-tasks) below |
+| Something that was decided or done, with its date | `planning/timeline.md` |
+| Anything for a session: plan, slides, runbook, recap, code | `planning/sessions/<term>/<YYYY-MM-DD-name>/`, copied from `_template/` |
+| An answer key attendees must not see early | `SOLUTION.md` in that session folder (git-ignored) |
+| Passwords, meeting links, contact details | `planning/private.md`, never a tracked file |
 
-Only `README.md`, `AGENTS.md`, and `CLAUDE.md` live at the top level.
+## Now
 
-## Current state: Event 2 is on October 7
+**Event 1**, the kickoff, ran online on Sep 16. Deck and recap: [planning/sessions/2026-fall/2026-09-16-kickoff/](planning/sessions/2026-fall/2026-09-16-kickoff/README.md).
 
-Event 1, the kickoff, ran online on Wednesday September 16. The deck is in [planning/sessions/2026-fall/2026-09-16-kickoff/](planning/sessions/2026-fall/2026-09-16-kickoff/README.md).
+**Event 2**, the AWS 101 workshop, is on **Oct 7**. The plan is [planning/sessions/2026-fall/2026-10-07-aws-101/README.md](planning/sessions/2026-fall/2026-10-07-aws-101/README.md). Attendees deploy the club's sign-up app (Next.js) to their own EC2 instance, then move its data to RDS by adding one `DATABASE_URL` line, no code. The app is on `main` of `aws-seneca/aws-101-workshop` but **has not been run on real AWS yet**. Blockers: how attendees get AWS accounts, and whether it is in person or online.
 
-Event 2 is the AWS 101 workshop, planned in [planning/sessions/2026-fall/2026-10-07-aws-101/README.md](planning/sessions/2026-fall/2026-10-07-aws-101/README.md). Following Bilal's direction, attendees clone the club's sign-up app (a Next.js waitlist page and organizer table), run it on their own EC2 instance, then move its data from a local JSON file to RDS PostgreSQL by adding one `DATABASE_URL` line, with no code changes. This differs from Bilal's Sep 23 wording that attendees "do the code side"; confirm with him. The app was rebuilt on 2026-09-24 and has not yet been run on real AWS.
+## Sessions
 
-Still open for Event 2:
+| Date | Session | Format | Status |
+|---|---|---|---|
+| 2026-09-16 | [Event 1: Kickoff](planning/sessions/2026-fall/2026-09-16-kickoff/README.md) | Online | Done |
+| 2026-10-07 | [Event 2: AWS 101 workshop](planning/sessions/2026-fall/2026-10-07-aws-101/README.md) | TBD | Planning |
+| 2026-10-28 | Event 3 | TBD | No topic yet |
+| 2026-11-18 | Event 4 | TBD | No topic yet |
 
-- **Accounts.** AWS now requires a payment method at signup and has replaced the twelve-month free tier with a credits-based free plan. Somebody needs to find a professor with an AWS Academy educator account who will host a Learner Lab classroom, or accept that some attendees cannot make an account. This blocks the pre-event email.
-- **Format.** In person or online is not decided.
-- **Runbook.** [workshop-runbook.md](planning/sessions/aws-official/workshop-runbook.md) still describes AWS's PHP sample page instead of the Express app. A step-by-step attendee tutorial is still to be written.
+To add a session: copy `planning/sessions/_template/` to `planning/sessions/<term>/<YYYY-MM-DD-short-name>/` (use `TBD-short-name` until the date is set), fill in its `README.md`, and add a row here. Commit only final slides, exported as `YYYY-MM-DD-short-name.pptx`. Fill in `recap.md` within a week and delete demo AWS resources.
 
-The club now has a GitHub org, [github.com/aws-seneca](https://github.com/aws-seneca), with a public [info](https://github.com/aws-seneca/info) repo. It has issue forms for event ideas and talk offers, which is one answer to the open question about moving task tracking off Discord.
+## Open tasks
 
-## Key dates
+Statuses are as of the date in the Source column. "No update" means nobody said it was done, not that it wasn't.
 
-| Event | Date | Format | Topic | Status |
+| Task | Owner | Due | Status | Source |
 |---|---|---|---|---|
-| Event 1, kickoff | Wed Sep 16, 1:00 to 2:00 PM ET | Online | Club intro, AWS explained simply, cert path, live S3 deploy | Done |
-| Event 2 | Wed Oct 7 | To be decided | AWS 101, core services workshop | Plan drafted Sep 13; workshop app built Sep 24 |
-| Event 3 | Wed Oct 28 | To be decided | Proposed: CI/CD part 1, container to production | Two-session track drafted Sep 13, needs Bilal's sign-off |
-| Event 4 | Wed Nov 18 | To be decided | Proposed: CI/CD part 2, the pipeline | Same proposal. Would consume both remaining fall slots |
+| **Event 2:** decide how attendees get AWS accounts (a professor hosting an AWS Academy Learner Lab classroom, or the fallback) | Bilal | Was Sep 19 | Open. Blocks the pre-event email | 2026-09-13 |
+| **Event 2:** decide format, in person or online | Bilal, Daksh | Week of Sep 22 | Open | 2026-09-13 |
+| **Event 2:** confirm the no-code challenge (Bilal said attendees "do the code side") | Bilal | Before slides | Open | 2026-09-24 |
+| **Event 2:** review and approve the plan | Daksh | Was week of Sep 15 | No update | 2026-09-13 |
+| **Event 2:** dry run on a fresh AWS account, capturing screenshots | Datta | Oct 5 | Not started | 2026-09-24 |
+| **Event 2:** build the slides | Unassigned | Sep 29 | Blocked on approval | 2026-09-13 |
+| **Event 2:** pre-event email and marketing posts | Unassigned | Sep 30 | Not started | 2026-09-13 |
+| Distribute AWS credits to the team | Bilal | Not set | No update since "I'll send them over" | 2026-08-16 |
+| Recruit more marketing help | Bilal | Ongoing | Open since Aug 22 | 2026-08-22 |
+| Walk event coordinators through SSF approval and Meetup creation | Bilal | Was Aug 28 | No update | 2026-09-04 |
+| Reach out to Amazon for speakers | Bilal | Not set | Not started | 2026-09-04 |
+| Assign content owners for Events 3 and 4 | Bilal | Not set | Open | 2026-09-13 |
+| Event 1 follow-ups: feedback form, Instagram launch post | Unassigned; Mohit, Maritza | Were before Sep 16 | No update | Run-of-show; 2026-09-08 |
 
-Conflict to watch: SSF Frosh runs events on Sep 15, 16, and 18. A midday online event on Sep 16 competes with Frosh for attendance. The team kept Sep 16.
+**Needs a decision:** which Meetup group URL is canonical (two circulate and split traffic); a replacement for the on-campus recap videos planned for Event 1.
 
-Weekly team meeting: Wednesdays at 7:00 PM ET on Google Meet. Set through when2meet after Sunday-morning slots kept failing. Room link in `planning/private.md`.
+**Parked:** a two-session CI/CD track (containers to production, then the pipeline) for Oct 28 and Nov 18, with its pricing, cleanup-script, Learner Lab, and dry-run tasks; drafts in git history at `events/cicd-track/` in commit `df72b74`. Moving task tracking off Discord. Posting between events and reposting @awsdevelopers. Booking the Helix space for an in-person event.
 
-## Team and roles
+## Team
 
-Roles marked "inferred" are not stated anywhere in the channel. They are read off who does what. Confirm and correct them.
-
-| Person | Role | What they do in the channel |
+| Person | Role | What they do |
 |---|---|---|
-| Bilal | President and lead | Runs meetings, handles SSF and Meetup filings, drafts and approves events, handles AWS credits and partner outreach |
-| Daksh | Event coordinator (inferred) | Registered SSF officer, slides, now leading Event 2 |
-| Hatim | Event coordinator (inferred) | Registered SSF officer, slides |
-| Sneha | Slides and content (inferred) | Built the first slide deck draft |
-| Maritza | Marketing | SSF rules and policy, Instagram and LinkedIn review, Frosh logistics |
-| Mohit | Marketing | Writes and schedules the LinkedIn and Instagram posts |
-| cynthia | Marketing | Tagged on marketing work, little channel activity |
-| davedat. (Datta) | Tech lead | Event 2 plan and workshop app, the org's GitHub repos |
+| Bilal | President | Runs meetings, SSF and Meetup filings, approves events, AWS credits, partner outreach |
+| Datta (davedat.) | Tech lead | Event 2 plan and app, the GitHub org |
+| Daksh | Event coordinator (inferred) | SSF officer, slides, leads Event 2 |
+| Hatim | Event coordinator (inferred) | SSF officer, slides |
+| Sneha | Slides and content (inferred) | Built the first Event 1 deck |
+| Maritza | Marketing | SSF rules and policy, post review |
+| Mohit | Marketing | Writes and schedules LinkedIn and Instagram posts |
+| Cynthia | Marketing | Tagged on marketing work |
 
-Bilal, Daksh, and Hatim are the three registered SSF officers. Only they can publish events on the SSF side.
-
-Marketing is short-handed. Bilal asked for referrals on 2026-08-22 and that ask is still open.
+"Inferred" roles are read off who does what in Discord; confirm them. Only Bilal, Daksh, and Hatim (the registered SSF officers) can publish events on the SSF platform. Weekly meeting: Wednesdays 7:00 PM ET on Google Meet (link in `planning/private.md`).
 
 ## Decisions on record
 
-Event 1 goes online on the same date. Decided 2026-09-03, announced 2026-09-08. SSF introduced a rule that club events cannot run within the first three weeks of the term. The team chose to keep Sep 16 and move online, because a two-week slip would compress the rest of the fall lineup and complicate back-to-back event filings and Amazon speaker outreach.
+- **Event 1 went online, same date** (decided Sep 3, announced Sep 8): SSF bans club events in the first three weeks of term; moving two weeks would have squeezed the fall lineup.
+- **Meetup is the RSVP link** (Sep 8). The Google Calendar link in an early draft is superseded.
+- **Events are published twice**: Meetup for public RSVPs, the SSF platform for approval. Bilal plans to hand this to the event coordinators from Event 2.
+- **Weekly meeting is Wednesday 7:00 PM ET** (Sep 1), after Sunday mornings failed.
+- **Event 2 is the club's own app on EC2 plus RDS** (Bilal, Sep 23), rebuilt as a no-code challenge on Sep 24, pending his confirmation.
+- **Sessions live in `planning/sessions/`** (Sep 24), not in the `info` repo, so there is one place to track them.
 
-Meetup is the canonical RSVP link. Mohit's first LinkedIn draft used a Google Calendar invite link, `calendar.app.google/A6gff2G6xL3Qzqse8`. Bilal corrected this on 2026-09-08. Treat the calendar link as superseded.
+## Links
 
-Events publish in two places. Meetup handles public RSVPs and the SSF platform handles official approval. Bilal drafted and approved Event 1 himself and intends to hand the process to the event coordinators from Event 2 onward.
-
-Weekly meetings moved off Sunday mornings. Sunday-morning slots didn't suit enough people, so on 2026-09-01 the slot moved to Wednesday evening.
-
-The food plan is moot for Event 1. SSF is relaxed about catering and the plan was pizza through Uber Eats. This matters again whenever an in-person event happens.
-
-## Open questions
-
-- Does anyone table at Frosh? Bilal and Hatim are both working and nobody else volunteered.
-- Marketing recap videos were going to be filmed on campus during Event 1. With the event online, this needs a replacement or a new date.
-- Were the AWS credits distributed? Bilal said on 2026-08-16 that he would send them and nothing has confirmed it since.
-- Who owns content for Events 3 and 4?
-- Should task tracking move off Discord? Daksh and davedat. both raised on Sep 13 that assignments get lost in ordinary conversation. Worth ten minutes at the next weekly meeting.
-
-## Links and resources
-
-Public:
-
-- Meetup group, https://www.meetup.com/aws-sbg-at-seneca-polytechnic/
-- Meetup group, Newnham Campus listing, https://www.meetup.com/aws-sbg-at-seneca-polytechnic-newnham-campus/
-- Event 1 RSVP, https://www.meetup.com/aws-sbg-at-seneca-polytechnic-newnham-campus/events/316473809
-- LinkedIn page, https://www.linkedin.com/company/aws-student-builder-seneca-poly/
-- Linktree, https://linktr.ee/awsseneca
-
-Both Meetup group URLs appear in the channel and nobody has said which is the real one. Worth resolving so posts stop splitting traffic.
-
-Internal tools:
-
-- SSF club signup, https://clubs.ssfinc.ca/SBG/club_signup
-- SSF event templates, https://clubs.ssfinc.ca/events_list?show=templates
-
-The Event 1 slide deck, meeting poll, design tool password and Google Meet rooms are in `planning/private.md`, which git ignores. This folder is public on GitHub.
+- Meetup: https://www.meetup.com/aws-sbg-at-seneca-polytechnic/ and the Newnham listing https://www.meetup.com/aws-sbg-at-seneca-polytechnic-newnham-campus/
+- LinkedIn: https://www.linkedin.com/company/aws-student-builder-seneca-poly/
+- Linktree: https://linktr.ee/awsseneca
+- GitHub org: https://github.com/aws-seneca (repos `info`, `.github`, `planning`, `aws-101-workshop`, `aws-101-official-tutorial`)
+- SSF club signup: https://clubs.ssfinc.ca/SBG/club_signup
+- SSF event templates: https://clubs.ssfinc.ca/events_list?show=templates

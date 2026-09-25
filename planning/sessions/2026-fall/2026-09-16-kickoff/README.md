@@ -79,5 +79,5 @@ From the deck. Times are the speaker-note estimates.
 ### After
 - [ ] Delete the demo S3 bucket
 - [ ] `recap.md` filled in
-- [ ] Status updated to Recapped here and in `sessions/README.md`
+- [ ] Status updated to Recapped here and in the sessions table of the top-level `README.md`
 - [ ] Event 2 (Oct 7) announced

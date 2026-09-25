@@ -101,6 +101,21 @@ In the same exchange the Event 2 scope is settled: **notes, not slides.** Daksh,
 
 ---
 
-## Where it stands
+## Completed tasks
 
-**Sep 13.** Three days to Event 1. The event is published and promoted, the slide deck exists in draft, and the run-of-show has not been adapted to an online format. Event 2 has a drafted plan awaiting Daksh's review. See [planning/action-items.md](action-items.md).
+Moved here from the old task list on 2026-09-24. Current status and open tasks are in the [README](../README.md).
+
+| Task | Owner | Completed |
+|---|---|---|
+| SSF officer confirmation form | Daksh, Hatim, Bilal | Aug 6 to 7 |
+| LinkedIn company page, team added as admins | Bilal | Aug 6 |
+| Meetup group created | Bilal | By Aug 16 |
+| Club launch post on LinkedIn, team as collaborators | Bilal | Aug 19 |
+| Event 1 filed for SSF approval | Bilal | Aug 22 |
+| Weekly meeting slot everyone can make (Wednesdays 7:00 PM ET) | Bilal | Sep 1 |
+| Event 1 launch post on LinkedIn, and the Discord #announcement post | Mohit | Sep 8 |
+| Sneha and davedat. brought in to start Event 2 | Daksh | Sep 10 |
+| Event 2 workshop plan drafted as notes | davedat. | Sep 13 |
+| Event 1 deck adapted for online delivery, final review pass | Exec team | Sep 16 |
+| `aws-seneca` GitHub org, public `info` repo, org profile | davedat. | Sep 16 |
+| Event 2 workshop app rebuilt (Next.js) and pushed to `aws-101-workshop` | davedat. | Sep 24 |

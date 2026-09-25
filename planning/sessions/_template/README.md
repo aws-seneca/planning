@@ -68,7 +68,7 @@ Two or three sentences for Meetup and social posts. What attendees will learn or
 ### After
 - [ ] Demo AWS resources deleted
 - [ ] `recap.md` filled in
-- [ ] Status updated to Recapped here and in `sessions/README.md`
+- [ ] Status updated to Recapped here and in the sessions table of the top-level `README.md`
 - [ ] Next event announced
 
 ## Notes
