@@ -9,7 +9,7 @@ The plan for Event 2, in one place. Attendee steps are in [app/WORKSHOP.md](app/
 | **Format** | **TBD.** In person is possible; the SSF three-week rule that forced Event 1 online no longer applies |
 | **Lead** | Daksh, who approves the plan. Bilal: approval, SSF filing, Meetup listing, account strategy. davedat.: plan and app. Sneha: contributor |
 | **App** | [app/](app/README.md), public repo `aws-seneca/aws-101-workshop`. Next.js waitlist page and organizer table |
-| **Study guide** | [site/](site/README.md), public repo `aws-seneca/aws-101-official-tutorial`, live at https://aws-seneca.github.io/aws-101-official-tutorial/. The workshop walkthrough plus concept and architecture pages |
+| **Study guide** | [study-guide/](../../study-guide/README.md), public repo `aws-seneca/aws-101-official-tutorial`, live at https://aws-seneca.github.io/aws-101-official-tutorial/. This workshop is its Lesson 2; Lesson 1 is AWS's official PHP tutorial |
 | **Status** | App rebuilt 2026-09-24, tested locally, **not yet run on real AWS**. No-code challenge needs Bilal's confirmation |
 
 ## The plan in one sentence
@@ -18,7 +18,7 @@ Every attendee deploys the club's sign-up app to their own EC2 instance, sees th
 
 It follows Bilal's direction (Sep 23): a small app cloned from the org, no CI/CD, database as the challenge. On 2026-09-24 the challenge became cloud-only: attendees change no code. The master plan's line for Event 2 is "Everyone leaves with something running."
 
-An alternative plan built on AWS's official PHP tutorial is kept in [aws-official/](../../aws-official/README.md) for reference; its companion site was rebuilt on 2026-09-24 as the study guide for this workshop.
+An alternative plan built on AWS's official PHP tutorial was not chosen. That tutorial is now Lesson 1 of the club's study notes, with its runbook in [study-guide/](../../study-guide/README.md).
 
 ## Run of show
 

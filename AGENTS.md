@@ -11,7 +11,8 @@ Direct, human, no hype: *"You are not selling a product. You are inviting people
 ## Where things live
 
 - Status and tasks: `README.md`. History, with dates: `planning/timeline.md`.
-- Sessions: `planning/sessions/<term>/<YYYY-MM-DD-name>/`, copied from `_template/`. A session's code is its own public repo checked out inside as `app/` or `site/` (git-ignored here; Event 2 has both: the workshop app and the study guide); its answer key is a git-ignored `SOLUTION.md`.
+- Sessions: `planning/sessions/<term>/<YYYY-MM-DD-name>/`, copied from `_template/`. A session's code is its own public repo checked out inside as `app/` (git-ignored here); its answer key is a git-ignored `SOLUTION.md`.
+- Study notes: `planning/sessions/study-guide/`, with the site repo checked out as `site/` (git-ignored). Lesson 1 is AWS's official PHP tutorial; Lesson 2 is Event 2's workshop.
 - `info/` and `org-profile/` are separate public repos (club page and guides; org profile). Commit and push there, never copy private material into them.
 - `planning/private.md` holds passwords and meeting links. Git-ignored; this repo is public. Never copy from it.
 - `sources/discord-log.md` is the cleaned Discord log (source material only, never current state). `sources/discord-log.raw-backup.md` is the untouched original.
